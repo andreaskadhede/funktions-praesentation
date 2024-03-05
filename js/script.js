@@ -13,7 +13,7 @@ function start(){
     
 }
 
-
+/***************************** Lav confetti ************************************/
 const canvas = document.getElementById('canvas');
 const ctx = canvas.getContext('2d');
 
@@ -76,3 +76,20 @@ function animateConfetti() {
 }
 
 /*************************** Afspil musik **********************************/ 
+// Function to play music
+function playMusic() {
+    const backgroundMusic = document.getElementById('backgroundMusic');
+    backgroundMusic.play();
+}
+
+// Function to stop music
+function stopMusic() {
+    const backgroundMusic = document.getElementById('backgroundMusic');
+    backgroundMusic.pause();
+}
+
+// Function to start the party
+function start() {
+    playMusic();
+    // Add other functionality to start the party (e.g., confetti animation)
+}
