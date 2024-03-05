@@ -7,8 +7,16 @@
     <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
-    <button onclick="start()" class="start" type="submit">Start festen!</button>
-    <img src="" alt="">
+    <button id="knap" onclick="start()" class="start" type="submit">Start festen!</button>
+    <img class="confetti" src="img/jason-leung-Xaanw0s0pMk-unsplash.jpg" alt="confetti">
+    <canvas id="canvas"></canvas>
+
+    <!-- Add audio element -->
+    <audio id="backgroundMusic" loop>
+        <source src="your-music-file.mp3" type="audio/mp3">
+        Your browser does not support the audio element.
+    </audio>
+    
     <script src="js/script.js"></script>
 </body>
 </html>
