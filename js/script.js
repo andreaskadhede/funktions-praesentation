@@ -1,16 +1,16 @@
-"use strict"
+"use strict";
 
-function start(){
+function startParty() {
+    playMusic();
     createConfetti();
     animateConfetti();
 
-    let knap = document.getElementById("knap");
-    knap.style.display = "none";
+    let startButton = document.getElementById("startButton");
+    startButton.style.display = "none";
     let canvas = document.getElementById("canvas");
     canvas.style.display = "block";
     let img = document.querySelector(".confetti");
     img.style.display = "block";
-    
 }
 
 /***************************** Lav confetti ************************************/
@@ -26,7 +26,7 @@ const confettiArray = [];
 // Function to create a confetti particle
 function Confetti() {
     this.x = Math.random() * canvas.width;
-    this.y = Math.random() * canvas.height - canvas.height;
+    this.y = Math.random() * canvas.height;
     this.color = '#' + (Math.random() * 0xFFFFFF << 0).toString(16);
     this.speed = Math.random() * 5 + 3;
     this.width = Math.random() * 10 + 5;
@@ -37,7 +37,7 @@ function Confetti() {
         this.y += this.speed;
 
         if (this.y >= canvas.height) {
-            this.y = Math.random() * canvas.height - canvas.height;
+            this.y = Math.random() * canvas.height;
         }
 
         this.rotation += Math.random() * 5;
@@ -46,7 +46,7 @@ function Confetti() {
         }
 
         this.draw();
-    }
+    };
 
     this.draw = function() {
         ctx.save();
@@ -55,7 +55,7 @@ function Confetti() {
         ctx.fillStyle = this.color;
         ctx.fillRect(-this.width / 2, -this.height / 2, this.width, this.height);
         ctx.restore();
-    }
+    };
 }
 
 // Function to create multiple confetti particles
@@ -86,10 +86,4 @@ function playMusic() {
 function stopMusic() {
     const backgroundMusic = document.getElementById('backgroundMusic');
     backgroundMusic.pause();
-}
-
-// Function to start the party
-function start() {
-    playMusic();
-    // Add other functionality to start the party (e.g., confetti animation)
 }

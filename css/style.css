@@ -13,6 +13,12 @@ body {
     overflow: hidden;
 }
 
+/* h1 {
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    color:blueviolet;
+    z-index: 0;
+} */
+
 .start{
     font-size: 50px; 
     padding: 10px 25px;
