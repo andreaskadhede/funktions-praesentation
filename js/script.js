@@ -103,3 +103,23 @@ function startParty() {
     let img = document.querySelector(".confetti");
     img.style.display = "block";
 }
+
+function startParty() {
+    playMusic();
+    createConfetti();
+    animateConfetti();
+
+    let startButton = document.getElementById("startButton");
+    startButton.style.display = "none";
+
+    let nameInput = document.getElementById("nameInput");
+    let name = nameInput.value.trim(); // Get the trimmed value of the input
+    let partyText = document.getElementById("partyText");
+    partyText.textContent = "Velkommen til festen, " + (name !== "" ? name + "!" : "gæst!"); // Update partyText with the name if provided, otherwise use "gæst"
+    partyText.classList.remove("hidden");
+
+    let canvas = document.getElementById("canvas");
+    canvas.style.display = "block";
+    let img = document.querySelector(".confetti");
+    img.style.display = "block";
+}
