@@ -73,26 +73,28 @@ const stopMusic = () => {
     backgroundMusic.pause();
 };
 
+
 function startParty() {
     playMusic();
     createConfetti();
     animateConfetti();
 
-    //Fjern knap
     let startButton = document.getElementById("startButton");
     startButton.style.display = "none";
 
-    // Vis tekst
+    let nameInput = document.getElementById("nameInput");
+    let name = nameInput.value.trim(); // Get the trimmed value of the input
     let partyText = document.getElementById("partyText");
+    partyText.textContent = "Velkommen til festen, " + (name !== "" ? name + "!" : "gæst!"); // Update partyText with the name if provided, otherwise use "gæst"
     partyText.classList.remove("hidden");
 
-    //Vis billede og confetti
     let canvas = document.getElementById("canvas");
     canvas.style.display = "block";
     let img = document.querySelector(".confetti");
     img.style.display = "block";
 
+    let input = document.getElementById("nameInput");
+    input.style.display = "none";
+
     console.log("Nu er festen i gang!")
 }
-
-

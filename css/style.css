@@ -6,6 +6,7 @@
 
 body {
     display: flex;
+    flex-direction: column;
     justify-content: center;
     align-items: center;
     height: 100vh;
@@ -18,25 +19,39 @@ body {
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
-    font-size: 24px;
     color: white;
     text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
     z-index: 2;
-    font-size: 75px;
+    font-size: 60px;
     font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+}
+
+input[type="text"] {
+    font-size: 24px;
+    padding: 10px;
+    margin-top: 20px; /* Tilføj lidt afstand over inputfeltet */
+    border: none;
+    border-radius: 10px;
+    width: 300px; /* Juster bredden efter behov */
+    display: block;
+    margin: 0 auto; /* Centrer inputfeltet */
+    text-align: center;
 }
 
 .hidden {
     display: none;
 }
 
-.start{
-    font-size: 50px; 
+.start {
+    font-size: 50px;
     padding: 10px 25px;
     border: none;
     cursor: pointer;
     border-radius: 10px;
     transition: 0.4s;
+    display: block;
+    margin: 0 auto; /* Centrer knappen */
+    margin-bottom: 20px;
 }
 
 .start:hover{
