@@ -1,18 +1,5 @@
 "use strict";
 
-function startParty() {
-    playMusic();
-    createConfetti();
-    animateConfetti();
-
-    let startButton = document.getElementById("startButton");
-    startButton.style.display = "none";
-    let canvas = document.getElementById("canvas");
-    canvas.style.display = "block";
-    let img = document.querySelector(".confetti");
-    img.style.display = "block";
-}
-
 /***************************** Lav confetti ************************************/
 const canvas = document.getElementById('canvas');
 const ctx = canvas.getContext('2d');
@@ -91,6 +78,7 @@ function startParty() {
     createConfetti();
     animateConfetti();
 
+    //Fjern knap
     let startButton = document.getElementById("startButton");
     startButton.style.display = "none";
 
@@ -98,8 +86,13 @@ function startParty() {
     let partyText = document.getElementById("partyText");
     partyText.classList.remove("hidden");
 
+    //Vis billede og confetti
     let canvas = document.getElementById("canvas");
     canvas.style.display = "block";
     let img = document.querySelector(".confetti");
     img.style.display = "block";
+
+    console.log("Nu er festen i gang!")
 }
+
+

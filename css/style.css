@@ -48,7 +48,8 @@ body {
     position: absolute;
     top: 0;
     display: none;
-    width: 100vw;
+    min-width: 100vw;
+    min-height: 100vh;
     z-index: 1;
     opacity: 0.3;
 }
