@@ -35,6 +35,7 @@ input[type="text"] {
     width: 300px; /* Juster bredden efter behov */
     display: block;
     margin: 0 auto; /* Centrer inputfeltet */
+    text-align: center;
 }
 
 .hidden {
