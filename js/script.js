@@ -20,10 +20,10 @@ const ctx = canvas.getContext('2d');
 canvas.width = window.innerWidth;
 canvas.height = window.innerHeight;
 
-// Create an array to store confetti
+// Array der indeholder confetti
 const confettiArray = [];
 
-// Function to create a confetti particle
+// Funktion der laver confetti
 function Confetti() {
     this.x = Math.random() * canvas.width;
     this.y = Math.random() * canvas.height;
@@ -58,14 +58,14 @@ function Confetti() {
     };
 }
 
-// Function to create multiple confetti particles
+// Funktion der laver flere confetti
 function createConfetti() {
     for (let i = 0; i < 100; i++) {
         confettiArray.push(new Confetti());
     }
 }
 
-// Function to animate the confetti
+// Funktion der animerer confetti
 function animateConfetti() {
     requestAnimationFrame(animateConfetti);
     ctx.clearRect(0, 0, canvas.width, canvas.height);
@@ -76,14 +76,12 @@ function animateConfetti() {
 }
 
 /*************************** Afspil musik **********************************/ 
-// Function to play music
-function playMusic() {
+const playMusic = () => {
     const backgroundMusic = document.getElementById('backgroundMusic');
     backgroundMusic.play();
-}
+};
 
-// Function to stop music
-function stopMusic() {
+const stopMusic = () => {
     const backgroundMusic = document.getElementById('backgroundMusic');
     backgroundMusic.pause();
-}
+};
