@@ -13,11 +13,20 @@ body {
     overflow: hidden;
 }
 
-/* h1 {
-    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
-    color:blueviolet;
-    z-index: 0;
-} */
+#partyText {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    font-size: 24px;
+    color: white;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+    z-index: 2;
+}
+
+.hidden {
+    display: none;
+}
 
 .start{
     font-size: 50px; 

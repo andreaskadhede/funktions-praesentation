@@ -85,3 +85,21 @@ const stopMusic = () => {
     const backgroundMusic = document.getElementById('backgroundMusic');
     backgroundMusic.pause();
 };
+
+function startParty() {
+    playMusic();
+    createConfetti();
+    animateConfetti();
+
+    let startButton = document.getElementById("startButton");
+    startButton.style.display = "none";
+
+    // Vis tekst
+    let partyText = document.getElementById("partyText");
+    partyText.classList.remove("hidden");
+
+    let canvas = document.getElementById("canvas");
+    canvas.style.display = "block";
+    let img = document.querySelector(".confetti");
+    img.style.display = "block";
+}
